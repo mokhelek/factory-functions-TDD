@@ -262,6 +262,8 @@ describe("Setting Warning & Critical Level For Settings-Bill Widget", function (
 
         settingsBill.setCallCosts(2.5);
         settingsBill.setSmsCosts(0.85);
+
+        
         settingsBill.setWarningLevel(5);
         settingsBill.setCriticalLevel(10);
 
@@ -276,10 +278,10 @@ describe("Setting Warning & Critical Level For Settings-Bill Widget", function (
         assert.equal("critical", settingsBill.totalClassName());
         assert.equal(10, settingsBill.getTotalCallCost());
 
-        
+
         settingsBill.setCriticalLevel(20);
 
-
+        assert.equal(10, settingsBill.getTotalCallCost());
         assert.equal("warning", settingsBill.totalClassName());
 
 
