@@ -1,10 +1,10 @@
 function billSettings() {
-    let theCallCost = 0;
-    let theSmsCost = 0;
-    let theWarningLevel = 0;
-    let theCriticalLevel = 0;
-    let callCostTotal = 0;
-    let smsCostTotal = 0;
+    let theCallCost = 0.00;
+    let theSmsCost = 0.00;
+    let theWarningLevel = 0.00;
+    let theCriticalLevel = 0.00;
+    let callCostTotal = 0.00;
+    let smsCostTotal = 0.00;
   
 
     // ? ######################################################### CALL & SMS Settings ###################################################  
@@ -55,7 +55,7 @@ function billSettings() {
     }
   
     function getTotalCost() {
-      return callCostTotal + smsCostTotal;
+      return (callCostTotal + smsCostTotal).toFixed(2);
     }
   
     function getTotalCallCost() {
